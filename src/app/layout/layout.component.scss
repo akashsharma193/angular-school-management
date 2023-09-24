@@ -1,0 +1,59 @@
+.example-container {
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+  display: flex;
+  height: 100%;
+}
+
+.example-sidenav {
+  user-select: none;
+  box-shadow: 5px 3px 20px 5px #f3f6f9;
+}
+
+.full-width {
+  width: 100%;
+  color: #2929a1;
+  font-weight: 600;
+}
+
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+  float: right;
+  margin-top: 8px;
+}
+
+.menu-button.rotated {
+  transform: rotate(180deg);
+  float: right;
+  margin-top: 8px;
+}
+
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+
+.submenu.expanded {
+  transform: scaleY(1);
+}
+
+.icon-list {
+  position: relative !important;
+  top: 5px;
+  margin-right: 13px;
+}
+
+::ng-deep .mat-drawer-content {
+  background-color: white;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

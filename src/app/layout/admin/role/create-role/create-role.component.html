@@ -1,0 +1,23 @@
+<p-toast></p-toast>
+<div mat-dialog-content>
+    <div class="modal-header">
+        <h5 class="modal-title">Create Role</h5>
+        <button type="button" mat-dialog-close class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form [formGroup]="createRole" (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Name<sub>*</sub></label>
+                <input formControlName="name" type="text" class="form-control">
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" mat-dialog-close data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" mat-dialog-close>Save changes</button>
+        </div>
+    </form>
+</div>

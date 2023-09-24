@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name">School Management</h1>
+    <span class="spacer"></span>
+    <span class="welcome-text">Hello Admin!</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>person_pin</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+</mat-toolbar>

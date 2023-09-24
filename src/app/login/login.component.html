@@ -1,0 +1,33 @@
+<div class="row header">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <h1 class="example-app-name">School Management</h1>
+    </mat-toolbar>
+</div>
+
+<mat-card class="card-item">
+    <mat-card-title class="card-title">Login</mat-card-title>
+<mat-card-content>
+<form class="form-block" [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-group">
+     
+      <input type="email" class="form-control" formControlName="username"  placeholder="Enter email">
+    </div>
+  
+    <div class="form-group">
+  
+      <input type="email" class="form-control" formControlName="password"  placeholder="Enter password">
+    </div>
+
+<!-- 
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p> -->
+
+  <div class="login-button">
+    <button type="submit" mat-button>Login</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>

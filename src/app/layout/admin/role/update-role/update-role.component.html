@@ -1,0 +1,21 @@
+<div mat-dialog-content>
+    <div class="modal-header">
+        <h5 class="modal-title">Update Role</h5>
+        <button type="button" mat-dialog-close class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form [formGroup]="updateRole" (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Name<sub>*</sub></label>
+                <input formControlName="name" type="text" class="form-control">
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" mat-dialog-close data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" mat-dialog-close>Update changes</button>
+        </div>
+    </form>
+</div>

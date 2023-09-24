@@ -1,0 +1,57 @@
+<div class="container-fluid">
+<div class="main-titale">
+<h4>Role</h4>
+</div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Admin</a></li>
+      <li class="breadcrumb-item active"><a href="#">Role</a></li>
+    </ol>
+  </nav>
+    <!-- Role -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <input type="text" placeholder="Search here.." class="form-control" #input (keyup)="applyFilter($event)">
+            </div>
+        </div>
+        <div class="col-md-9">
+            <button (click)="openDialog()" class="create-role" mat-stroked-button color="primary">Create Role
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <table mat-table [dataSource]="dataSource" matSort>
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell [ngClass]="{'table-header' : isLoaded==true}"  *matHeaderCellDef mat-sort-header> ID </th>
+                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container  matColumnDef="name">
+                <th mat-header-cell [ngClass]="{'table-header' : isLoaded==true}" *matHeaderCellDef mat-sort-header> Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+            </ng-container>
+               <!-- Name Column -->
+            <ng-container  matColumnDef="action">
+                <th mat-header-cell [ngClass]="{'table-header' : isLoaded==true}" *matHeaderCellDef mat-sort-header> Action </th>
+                <td mat-cell *matCellDef="let row"> 
+                <a class="action-tool" href="javascript:;">
+                    <i class="fa fa-trash" aria-hidden="true"></i> 
+                    <i class="fa fa-edit" (click)="roleToupdate(row)" aria-hidden="true"></i>
+                </a>    
+                </td>
+            </ng-container>
+            <tr mat-header-row [ngClass]="{'table-header' : isLoaded==true}"  *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row"  *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+</div>

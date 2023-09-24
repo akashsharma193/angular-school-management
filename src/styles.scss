@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-toolbar.mat-primary {
+    background-color: #2929a1 !important;
+}
+
+
+::ng-deep .mat-list-item {
+    color: #2929a1 !important;
+}
+
+.icon-list {
+    color: #2929a1 !important;
+}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+ ::ng-deep .mat-mdc-header-row {
+    background-color: #2929a1 !important;
+    color: white !important;
+  }
+  
+.create-role{
+    float: right;
+    position: relative;
+   
+}
+
+table {
+    width: 100%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .mat-header-cell {
+    color: #fff;
+    font-size: 15px;
+  }
+  tr.mat-header-row {
+    height: 43px;
+    background:
+    #1b8ce2 ;
+    color: #fff;
+}
+
+
+::ng-deep .mat-mdc-text-field-wrapper {
+    width: 100%;
+    background-color: none;
+}
+
+.main-titale{
+  margin-top: 30px;
+  color: #2929a1;
+}
+
+sub{
+  margin-left: 2px;
+  top: 0;
+  font-size: 14px;
+  color: red;
+}
+
+.action-tool{
+  color: red;
+  font-size: 15px;
+}
+
+.action-tool:hover{
+  color: red;
+  font-size: 15px;
+}
